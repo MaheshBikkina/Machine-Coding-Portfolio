@@ -3,6 +3,8 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 0 34px;
     gap: 24px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.205);
 }
 
 .stats-container {
@@ -43,10 +45,11 @@
     }
 
     .stats-container h3 {
-    font-size: 1.2rem;
-}
-.stats-container p {
-    font-size: 0.875 rem;
-}
+        font-size: 1.2rem;
+    }
+
+    .stats-container p {
+        font-size: 0.875 rem;
+    }
 
 }

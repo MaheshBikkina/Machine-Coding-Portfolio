@@ -1,16 +1,26 @@
-.navbar {
+/* .navbar {
     display: flex;
     align-items: center;
     padding: 18px 5%;
     justify-content: space-between;
-    background-color: rgba(50, 69, 74, 0.12);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100%; */
+
+
+    /* background-color: rgba(50, 69, 74, 0.12); */
+    /* background-color: var(--bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0 0 8px 8px;
-}
+} */
 
-.navbar__brand {
+/* .navbar__brand {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -76,4 +86,99 @@
     white-space: nowrap;
     text-decoration: none;
     background: #A30072;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 18px 34px;
+    justify-content: space-between;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 0 0 8px 8px;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-h);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar__brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar__brand-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-h);
+}
+
+.navbar__brand-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: monospace;
+    color: var(--text-muted);
+}
+
+.navbar__logo {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    text-spacing-trim: normal;
+    height: 40px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: var(--accent);
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar__link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+    color: var(--accent-hover);
+}
+
+.navbar__github {
+    padding: 11px 18px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    background: var(--accent-hover);
+    transition: background 0.2s ease;
+}
+
+.navbar__github:hover {
+    background: var(--accent);
 }

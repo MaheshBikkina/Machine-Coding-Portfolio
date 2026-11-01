@@ -1,12 +1,17 @@
-import './Hero.css'
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section id='home' className='hero'>
-      <h2>Building UI. Solving Problems</h2>
-      <p>A collection of frontend machine coding challenges, reusable components, and practical React implementations.</p>
+    <section id="home" className="hero">
+      <div>
+        <h2>Building UI. Solving Problems</h2>
+        <p>
+          A collection of frontend machine coding challenges, reusable
+          components, and practical React implementations.
+        </p>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

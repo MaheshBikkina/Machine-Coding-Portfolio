@@ -1,17 +1,13 @@
-
+/* 
 .challenges-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 32px;
   width: 100%;
+  padding: 28px 34px 0 34px;
   box-sizing: border-box;
-}
+} */
 
 /* Left section */
-.challenge-section {
+/* .challenge-section {
   min-width: 0;
-  padding: 34px 0 48px 34px;
   box-sizing: border-box;
 }
 
@@ -27,11 +23,12 @@
   font-size: 1.5rem;
   font-weight: 650;
   letter-spacing: -0.4px;
-}
+} */
 
 /* Search and filter */
-.challenge-toolbar {
-  display: flex;
+/* .challenge-toolbar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
@@ -44,8 +41,9 @@
   padding: 0 14px;
   border: 1px solid rgba(255, 255, 255, 0.205);
   border-radius: 8px;
-  background: rgba(50, 69, 74, 0.12);
-  backdrop-filter: blur(12px);
+  background: var(--glass-bg); */
+/* rgba(50, 69, 74, 0.12) */
+/* backdrop-filter: blur(12px);
   color: white;
   outline: none;
   box-sizing: border-box;
@@ -70,10 +68,20 @@
 }
 
 /* Challenge cards grid */
-.challenge-grid {
+/* .challenge-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
+  max-height: 700px;
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  background-color: rgba(50, 69, 74, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.205);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  margin-bottom: 34px;
 }
 
 .challenge-card {
@@ -81,14 +89,20 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
-  min-height: 280px;
+  min-height: 200px;
   width: 100%;
-  padding: 24px 20px;
+  padding: 20px 20px;
   border: 1px solid rgba(255, 255, 255, 0.205);
   border-radius: 8px;
-  background: rgba(50, 69, 74, 0.12);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   box-sizing: border-box;
+}
+
+.challenge-card img {
+  border-radius: 10px;
+  object-fit: cover;
+
 }
 
 .challenge-card h3 {
@@ -103,10 +117,10 @@
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.5;
-}
+} */
 
 /* Right section */
-.recently-solved-section {
+/* .recently-solved-section {
   flex: 2 1 0;
   min-width: 0;
   margin: 34px 34px 48px 0;
@@ -129,7 +143,229 @@
   color: #a5b1c2;
   font-size: 0.95rem;
   line-height: 1.5;
+} */
+
+/* Tablet */
+/* @media (max-width: 900px) {
+  .challenges-layout {
+    gap: 20px;
+  }
+
+  .challenge-section {
+    flex: 1.7;
+    padding-left: 20px;
+  }
+
+  .recently-solved-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* Mobile */
+/* @media (max-width: 600px) {
+  .challenges-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .challenge-section {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .recently-solved-section {
+    width: calc(100% - 32px);
+    margin: 0 16px 24px;
+  }
+
+  .challenge-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .challenge-toolbar input,
+  .challenge-toolbar select {
+    width: 100%;
+    flex: auto;
+  }
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}  */
+
+.challenges-layout {
+  width: 100%;
+  padding: 28px 34px 0 34px;
+  box-sizing: border-box;
+}
+
+/* Left section */
+.challenge-section {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.explore-card>h2 {
+  margin: 0 0 28px;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+  color: var(--text-h);
+}
+
+/* Search and filter */
+.challenge-toolbar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.challenge-toolbar input,
+.challenge-toolbar select {
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-h);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.challenge-toolbar input::placeholder {
+  color: var(--text-muted);
+}
+
+.challenge-toolbar input {
+  flex: 1;
+}
+
+.challenge-toolbar select {
+  flex: 0 1 150px;
+}
+
+.challenge-toolbar select option {
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+.challenge-toolbar input:focus,
+.challenge-toolbar select:focus {
+  border-color: var(--accent);
+}
+
+/* Challenge cards grid */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  max-height: 700px;
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  /* background-color: var(--surface-raised); */
+  background: url('/images/ElegantGreenBotanicalCornerSketch.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 18px;
+  margin-bottom: 34px;
+  box-shadow: var(--shadow-sm);
+}
+
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 200px;
+  width: 100%;
+  padding: 20px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.challenge-card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
+
+.challenge-card img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.challenge-card h3 {
+  margin: 24px 0 20px;
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.3px;
+  color: var(--text-h);
+}
+
+.challenge-card p {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Right section */
+/*
+.recently-solved-section {
+  flex: 2 1 0;
+  min-width: 0;
+  margin: 34px 34px 48px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-sizing: border-box;
+}
+
+.recently-solved-section h2 {
+  margin: 0 0 12px;
+  color: var(--text-h);
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.recently-solved-section p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+*/
 
 /* Tablet */
 @media (max-width: 900px) {

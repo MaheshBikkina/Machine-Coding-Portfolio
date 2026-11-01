@@ -1,5 +1,6 @@
-.hero {
+/* .hero {
     padding: 34px;
+    display: flex;
 }
 
 .hero h2{
@@ -16,6 +17,22 @@
     color: var(--text);
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     line-height: 1.55;
+} */
+
+/* .self{
+    width: 25%;
+    border-radius:10px;
+    overflow: hidden;
+    background: var(--glass-bg); */
+    /* background-color:rgba(50, 69, 74, 0.12); */
+    /* backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.205);
+    justify-content: center;
+    margin-right: 34px;
+} */
+
+/* .self img{
+    opacity: 0.5;
 }
 
 @media (max-width:640px){
@@ -27,4 +44,50 @@
     margin-bottom: 18px;
     letter-spacing: -0.7px;
 }
+} */
+
+
+.hero {
+    padding: 34px;
+    margin-bottom: 24px;
+    display: flex;
+    background-image: url('/images/ElegantGreenBotanicalCornerSketch.png');
+    background-size: cover;
+    background-position:end;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.hero h2 {
+    margin-bottom: 28px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    color: var(--text-h);
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero p {
+    /* max-width: 1120px; */
+    margin-bottom: 0;
+    color: var(--text);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    line-height: 1.55;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 28px;
+    }
+
+    .hero h2 {
+        margin-bottom: 18px;
+        letter-spacing: -0.7px;
+    }
 }

@@ -5,32 +5,35 @@
 
 :root {
   /* Background colors */
-  --bg: #0b1220;
-  --surface: #141e30;
-  --surface-hover: #1d2a40;
-  --surface-raised: #19263a;
+  --bg: #F5F6EF;
+  --surface: #FFFFFF;
+  --surface-hover: #F0F3EA;
+  --surface-raised: #E5EBDD;
 
   /* Text colors */
-  --text: #D6D0E2;
-  --text-h: #f8fafc;
-  --text-muted: #94a3b8;
+  --text: #526254;
+  --text-h: #26372B;
+  --text-muted: #89968A;
 
   /* Accent colors */
-  --accent: #A78BFA;
-  --accent-hover: #CF0DFF;
-  --accent-bg: rgba(163, 230, 53, 0.1);
-  --accent-border: rgba(163, 230, 53, 0.3);
+  --accent: #78917A;
+  --accent-hover: #405B46;
+  --accent-bg: rgba(120, 145, 122, 0.12);
+  --accent-border: rgba(120, 145, 122, 0.3);
 
   /* Borders */
-  --border: #253247;
-  --border-hover: #3b4a61;
+  --border: #DCE4D8;
+  --border-hover: #B9CBB8;
 
   /* Glassmorphism */
-  --glass-bg: rgba(11, 18, 32, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(245, 246, 239, 0.82);
+  --glass-border: rgba(70, 100, 75, 0.12);
 
   /* Code blocks */
-  --code-bg: #101a2b;
+  --code-bg: #EDF2EA;
+
+  /* Color scheme */
+  color-scheme: light;
 
   /* Typography */
   --sans: Inter, "Segoe UI", Roboto, sans-serif;
@@ -61,7 +64,6 @@
   /* Global colors */
   color: var(--text);
   background: var(--bg);
-  color-scheme: dark;
 
   /* Text rendering */
   font-synthesis: none;
@@ -92,11 +94,10 @@ body {
   min-height: 100vh;
   font-family: var(--mono);
   color: var(--text);
-  /* background: var(--bg); */
-  background-image:
-    
-    url("/images/coder.jpg");
-    background-size: cover;
+  background-color: var(--bg);
+
+  /* background-image: url("/images/coder.jpg"); */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -271,7 +272,7 @@ button {
 }
 
 ::selection {
-  color: var(--bg);
+  color: #FFFFFF;
   background: var(--accent);
 }
 
@@ -293,6 +294,11 @@ button {
     padding: 18px;
   }
 }
+
+
+/* ========================================
+   8. REDUCED MOTION
+   ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
   *,

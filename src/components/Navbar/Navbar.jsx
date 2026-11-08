@@ -1,6 +1,8 @@
 import "./Navbar.css";
-
+import { useTheme } from "../../context/useTheme";
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+
   const navlinks = [
     { label: "Home", href: "#home" },
     { label: "Challenges", href: "#challenges" },
@@ -27,9 +29,20 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <a href="#github" className="navbar__github">
+      <div className="right-container">
+        <a href="#github" className="navbar__github">
         GitHub ↗
       </a>
+
+
+      <select className="theme-selecter" value={theme} onChange={(e)=>setTheme(e.target.value.trim())}>
+        <option value="dark">Dark</option>
+        <option value="sage">Sage</option>
+        <option value="navy">Navy</option>
+        <option value="burgundy">Burgundy</option>
+      </select>
+      </div>
+
     </header>
   );
 };

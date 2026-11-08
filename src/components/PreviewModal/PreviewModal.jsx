@@ -1,13 +1,13 @@
 import "./PreviewModal.css"
 
-const PreviewModal = ({setPreShow}) => {
+const PreviewModal = ({setPreShow, project}) => {
   return (
     <div className="modal-overlay">
       <div className="preview-modal">
         <div className="modal-header">
           <div>
-            <h2>Project Title</h2>
-            <p>Live project Preview</p>
+            <h2>{project.title}</h2>
+            <p>{`Live ${project.title} preview`}</p>
           </div>
           <div>
             <button onClick={()=>setPreShow(false)}>&times;</button>
@@ -17,7 +17,7 @@ const PreviewModal = ({setPreShow}) => {
         </div>
 
         <div className="modal-content">
-            <iframe src='https://mb-expense-tracker.netlify.app/' title="Project-Title" allowFullScreen></iframe>
+            <iframe src={project.demoUrl} title="Project-Title" allowFullScreen></iframe>
         </div>
       </div>
     </div>

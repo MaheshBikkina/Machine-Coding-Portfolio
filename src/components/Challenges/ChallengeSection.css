@@ -320,7 +320,9 @@
 }
 
 .challenge-card img {
-  border-radius: 10px;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-radius: 2px;
   object-fit: cover;
 }
 
@@ -337,6 +339,17 @@
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.challenge-card__preview {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+}
+
+.challenge-card__preview:hover {
+  background-color: var(--accent-hover);
 }
 
 /* Right section */

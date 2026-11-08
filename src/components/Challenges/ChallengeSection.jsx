@@ -2,7 +2,7 @@ import { useState } from "react";
 import { challenges } from "../../data/chanllenges";
 import ChallengeCard from "./ChallengeCard";
 import "./ChallengeSection.css";
-const Challenges = ({setPreShow}) => {
+const Challenges = ({handleOpenModal}) => {
   const [input, setInput] = useState('');
   const [difficulty, setDifficulty] = useState('All levels')
 
@@ -44,7 +44,7 @@ const Challenges = ({setPreShow}) => {
               <ChallengeCard
                 key={challenge.id}
                 challenge={challenge}
-                setPreShow={setPreShow}
+                handleOpenModal={handleOpenModal}
               ></ChallengeCard>
             ))}
             {filteredChallenges.length == 0 && <p>No Challenges found</p>}

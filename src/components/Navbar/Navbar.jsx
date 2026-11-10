@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTheme } from "../../context/useTheme";
@@ -10,12 +9,12 @@ const Navbar = ({ activePage, setActivePage }) => {
   const navbarRef = useRef(null);
 
   const navlinks = [
-  { label: "Home", page: "home" },
-  { label: "About", page: "about" },
-  { label: "Challenges", page: "challenges" },
-  { label: "Projects", page: "projects" },
-  { label: "Contact", page: "contact" },
-];
+    { label: "Home", page: "home" },
+    { label: "About", page: "about" },
+    { label: "Challenges", page: "challenges" },
+    { label: "Projects", page: "projects" },
+    { label: "Contact", page: "contact" },
+  ];
 
   const handleNavigation = (page) => {
     setActivePage(page);
@@ -25,10 +24,7 @@ const Navbar = ({ activePage, setActivePage }) => {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target)
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };
@@ -94,9 +90,7 @@ const Navbar = ({ activePage, setActivePage }) => {
             className={`navbar__link ${
               activePage === link.page ? "active" : ""
             }`}
-            aria-current={
-              activePage === link.page ? "page" : undefined
-            }
+            aria-current={activePage === link.page ? "page" : undefined}
           >
             {link.label}
           </button>
@@ -122,12 +116,12 @@ const Navbar = ({ activePage, setActivePage }) => {
             onChange={(e) => setTheme(e.target.value)}
             aria-label="Select theme"
           >
-            <option value="dark">Dark</option>
-            <option value="orange">Orange</option>
             <option value="sage">Sage</option>
+            <option value="outfit">Outfit</option>
+            <option value="orange">Orange</option>
             <option value="navy">Navy</option>
             <option value="burgundy">Burgundy</option>
-            <option value="outfit">Outfit</option>
+            <option value="dark">Dark</option>
           </select>
 
           <ChevronDown size={15} />
@@ -140,9 +134,7 @@ const Navbar = ({ activePage, setActivePage }) => {
         type="button"
         className="navbar__menu-toggle"
         onClick={() => setMenuOpen((previous) => !previous)}
-        aria-label={
-          menuOpen ? "Close navigation menu" : "Open navigation menu"
-        }
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={menuOpen}
         aria-controls="mobile-navigation"
       >
@@ -153,9 +145,7 @@ const Navbar = ({ activePage, setActivePage }) => {
 
       <div
         id="mobile-navigation"
-        className={`navbar__mobile-menu ${
-          menuOpen ? "is-open" : ""
-        }`}
+        className={`navbar__mobile-menu ${menuOpen ? "is-open" : ""}`}
         aria-hidden={!menuOpen}
         inert={!menuOpen}
       >
@@ -168,9 +158,7 @@ const Navbar = ({ activePage, setActivePage }) => {
               className={`navbar__mobile-link ${
                 activePage === link.page ? "active" : ""
               }`}
-              aria-current={
-                activePage === link.page ? "page" : undefined
-              }
+              aria-current={activePage === link.page ? "page" : undefined}
               tabIndex={menuOpen ? 0 : -1}
             >
               {link.label}

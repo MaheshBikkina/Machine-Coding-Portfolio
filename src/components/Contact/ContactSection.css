@@ -1,0 +1,518 @@
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding: 90px 5%;
+  overflow: hidden;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-container,
+.contact-extra-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   MAIN CONTACT CONTENT
+======================================== */
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 65px;
+}
+
+.contact-content {
+  max-width: 720px;
+}
+
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.contact-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+.contact-content h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  color: var(--text-h);
+  margin: 25px 0 20px;
+}
+
+.contact-content h2 span {
+  color: var(--accent);
+}
+
+.contact-description {
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   CONTACT BUTTONS
+======================================== */
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.contact-primary-btn,
+.contact-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-primary-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+
+.contact-primary-btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+.contact-secondary-btn {
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--border-hover);
+}
+
+.contact-secondary-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   DECORATIVE BRANDING
+======================================== */
+
+.contact-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.contact-decoration-circle {
+  width: 210px;
+  height: 210px;
+  border: 1px solid var(--accent-border);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: var(--glass-bg);
+}
+
+.contact-decoration-circle::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px dashed var(--border-hover);
+  border-radius: 50%;
+}
+
+.contact-decoration-circle span {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.contact-decoration-text {
+  color: var(--text-muted);
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   AVAILABILITY CARD
+======================================== */
+
+.availability-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 23px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.availability-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.availability-indicator {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #58a477;
+  box-shadow: 0 0 0 5px rgba(88, 164, 119, 0.12);
+}
+
+.availability-left h4 {
+  margin: 0 0 5px;
+  color: var(--text-h);
+  font-size: 14px;
+}
+
+.availability-left p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.availability-tag,
+.building-status {
+  color: #43835a;
+  background: rgba(88, 164, 119, 0.12);
+  border: 1px solid rgba(88, 164, 119, 0.2);
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ========================================
+   FEATURE CARDS
+======================================== */
+
+.contact-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.contact-feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.contact-feature-card:hover {
+  transform: translateY(-5px);
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.feature-icon svg {
+  width: 20px;
+}
+
+.contact-feature-card h3 {
+  color: var(--text-h);
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.contact-feature-card p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 44px;
+  margin: 0 0 18px;
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--accent);
+  font: 600 12px monospace;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.feature-link:hover {
+  color: var(--accent-hover);
+}
+
+/* ========================================
+   CURRENTLY BUILDING
+======================================== */
+
+.currently-building {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 22px;
+  transition: all 0.3s ease;
+}
+
+.building-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.building-header > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--accent);
+  font: 600 11px monospace;
+  letter-spacing: 1.5px;
+}
+
+.building-content {
+  display: flex;
+  gap: 19px;
+  align-items: flex-start;
+}
+
+.building-icon {
+  display: grid;
+  place-items: center;
+  min-width: 52px;
+  height: 52px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+}
+
+.building-info h3 {
+  color: var(--text-h);
+  margin: 0 0 9px;
+  font-size: 19px;
+}
+
+.building-info p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 17px;
+}
+
+.building-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.building-technologies span {
+  font: 11px monospace;
+  padding: 7px 10px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+}
+
+/* ========================================
+   SOCIAL CONNECTIONS
+======================================== */
+
+.contact-social-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+}
+
+.social-heading h3 {
+  font-size: 17px;
+  color: var(--text-h);
+  margin: 0 0 7px;
+}
+
+.social-heading p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+.contact-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 11px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+.contact-section a:focus-visible,
+.contact-section button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+  .contact-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-social-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 65px 6%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-decoration {
+    align-self: center;
+  }
+
+  .contact-decoration-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-feature-card p {
+    min-height: auto;
+  }
+
+  .availability-card {
+    padding: 16px;
+  }
+
+  .availability-left p {
+    max-width: 190px;
+    line-height: 1.6;
+  }
+
+  .building-content {
+    flex-direction: column;
+  }
+
+  .contact-social-links {
+    width: 100%;
+  }
+
+  .social-link {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content h2 {
+    letter-spacing: -1px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-actions a {
+    justify-content: center;
+  }
+}

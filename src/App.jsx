@@ -5,7 +5,9 @@ import Hero from "./components/Hero/Hero";
 import Stats from "./components/Stats/Stats";
 import ChallengeSection from "./components/Challenges/ChallengeSection";
 import PreviewModal from "./components/PreviewModal/PreviewModal";
+import FooterSection from "./components/Footer/FooterSection";
 import { useState } from "react";
+import ContactSection from "./components/Contact/ContactSection";
 
 function App() {
   const [preShow, setPreShow] = useState(false);
@@ -29,6 +31,8 @@ function App() {
         <Hero></Hero>
         <Stats></Stats>
         <ChallengeSection handleOpenModal={handleOpenModal}></ChallengeSection>
+        <ContactSection></ContactSection>
+        <FooterSection></FooterSection>
       </main>
     </>
   );

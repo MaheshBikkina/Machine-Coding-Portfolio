@@ -48,7 +48,7 @@ const FooterSection = () => {
             <h4>Connect</h4>
 
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/MaheshBikkina"
               target="_blank"
               rel="noreferrer"
             >
@@ -56,14 +56,14 @@ const FooterSection = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/YOUR_USERNAME"
+              href="https://www.linkedin.com/in/maheshbikkina3310/"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn ↗
             </a>
 
-            <a href="mailto:your-email@example.com">
+            <a href="mailto:maheshbikkina3310@gmail.com">
               Email ↗
             </a>
           </div>

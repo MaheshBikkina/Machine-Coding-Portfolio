@@ -1,4 +1,3 @@
-
 import { useMemo, useState } from "react";
 import { challenges } from "../../data/chanllenges";
 import ChallengeCard from "./ChallengeCard";
@@ -9,17 +8,22 @@ const Challenges = ({ handleOpenModal }) => {
   const [difficulty, setDifficulty] = useState("All levels");
 
   // Filter challenges based on search and difficulty
+
   const filteredChallenges = useMemo(() => {
     return challenges.filter((challenge) => {
       const searchText = input.toLowerCase().trim();
 
+      // Convert topics into a searchable string
+      const topicsText = Array.isArray(challenge.topics)
+        ? challenge.topics.join(" ")
+        : (challenge.topics ?? "");
+
       const matchesSearch =
         challenge.title.toLowerCase().includes(searchText) ||
-        (challenge.topics ?? "").toLowerCase().includes(searchText);
+        topicsText.toLowerCase().includes(searchText);
 
       const matchesDifficulty =
-        difficulty === "All levels" ||
-        challenge.difficulty === difficulty;
+        difficulty === "All levels" || challenge.difficulty === difficulty;
 
       return matchesSearch && matchesDifficulty;
     });
@@ -35,7 +39,6 @@ const Challenges = ({ handleOpenModal }) => {
     <div className="challenges-layout">
       <section id="challenges" className="challenge-section">
         <div className="explore-card">
-
           <h2>Explore Challenges</h2>
 
           <div className="challenge-toolbar">
@@ -60,7 +63,8 @@ const Challenges = ({ handleOpenModal }) => {
           </div>
 
           <div className="challenge-results">
-            Showing {filteredChallenges.length} of {challenges.length} challenges
+            Showing {filteredChallenges.length} of {challenges.length}{" "}
+            challenges
           </div>
 
           <div
@@ -93,7 +97,6 @@ const Challenges = ({ handleOpenModal }) => {
               Clear filters
             </button>
           )}
-
         </div>
       </section>
     </div>

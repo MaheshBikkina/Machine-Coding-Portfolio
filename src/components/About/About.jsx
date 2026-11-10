@@ -93,7 +93,7 @@ const About = () => {
 
             <a
               className="about-github-link"
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/MaheshBikkina"
               target="_blank"
               rel="noreferrer"
             >

@@ -10,6 +10,7 @@ import PreviewModal from "./components/PreviewModal/PreviewModal";
 import FooterSection from "./components/Footer/FooterSection";
 import ContactSection from "./components/Contact/ContactSection";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [activePage, setActivePage] = useState("home");
@@ -42,9 +43,7 @@ function App() {
         );
 
       case "projects":
-        return (
-          <div className="placeholder-page">Projects page coming soon.</div>
-        );
+        return <Projects />;
 
       case "contact":
         return <ContactSection />;

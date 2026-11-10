@@ -291,7 +291,7 @@ Topic: ${selectedTopic}
           <div className="contact-social-links">
 
             <a
-              href="mailto:YOUR_EMAIL@example.com"
+              href="mailto:maheshbikkina3310@gmail.com"
               className="contact-social-card"
             >
               <span className="contact-social-icon">
@@ -307,7 +307,7 @@ Topic: ${selectedTopic}
             </a>
 
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/MaheshBikkina"
               target="_blank"
               rel="noreferrer"
               className="contact-social-card"
@@ -325,7 +325,7 @@ Topic: ${selectedTopic}
             </a>
 
             <a
-              href="https://www.linkedin.com/in/YOUR_USERNAME/"
+              href="https://www.linkedin.com/in/maheshbikkina3310/"
               target="_blank"
               rel="noreferrer"
               className="contact-social-card"

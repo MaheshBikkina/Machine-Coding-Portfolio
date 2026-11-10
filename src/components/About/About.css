@@ -1,0 +1,518 @@
+
+/* =========================================
+   CODEFORGE - ABOUT PAGE
+========================================= */
+
+.about-section {
+  width: 100%;
+  padding: 32px 34px 42px;
+  box-sizing: border-box;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING AND PROFILE
+========================================= */
+
+.about-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+
+  margin-bottom: 34px;
+}
+
+.about-heading-text {
+  min-width: 0;
+}
+
+.about-eyebrow,
+.about-subheading {
+  display: block;
+
+  color: var(--text-muted);
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Heading */
+
+.about-heading-text h2 {
+  margin: 17px 0 0;
+
+  color: var(--text-h);
+
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -1.4px;
+  line-height: 1.2;
+}
+
+/* =========================================
+   PROFILE IMAGE AND NAME BLOCK
+========================================= */
+
+.about-heading-image {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+
+  width: 100%;
+  height: 185px;
+
+  overflow: hidden;
+
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Profile photo */
+
+.about-profile-photo {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-right: 3px solid var(--text-h);
+}
+
+.about-profile-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Name area */
+
+.about-heading-image-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 0;
+  height: 100%;
+
+  padding: 8px 4px 8px 5px;
+
+  overflow: hidden;
+}
+
+.about-heading-image-name h2 {
+  width: 100%;
+  margin: 0;
+
+  color: var(--text-h);
+
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 0.88;
+
+  white-space: nowrap;
+}
+
+/* First name */
+
+.about-heading-image-name .firstname {
+  align-self: flex-start;
+
+  font-size: clamp(3rem, 5.4vw, 6rem);
+  text-align: left;
+}
+
+/* Last name */
+
+.about-heading-image-name .lastname {
+  align-self: flex-end;
+
+  color: var(--text-muted);
+
+  font-size: clamp(2.6rem, 4.5vw, 5rem);
+  text-align: right;
+
+  padding-right: 2px;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+
+  gap: 65px;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.about-intro {
+  max-width: 620px;
+  min-width: 0;
+}
+
+.about-intro p {
+  margin: 0 0 19px;
+
+  color: var(--text-muted);
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.about-intro .about-lead {
+  margin-bottom: 22px;
+
+  color: var(--text-h);
+
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+/* Explore link */
+
+.about-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 7px;
+
+  color: var(--accent);
+
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.about-github-link:hover {
+  color: var(--accent-hover);
+  gap: 12px;
+}
+
+/* =========================================
+   FOCUS AREAS
+========================================= */
+
+.about-interests {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.about-subheading {
+  margin-bottom: 18px;
+}
+
+/* Individual interest row */
+
+.about-interest {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-interest:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.about-interest:hover {
+  padding-left: 5px;
+}
+
+/* Interest icon */
+
+.about-interest-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  color: var(--accent);
+  background: var(--accent-bg);
+
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+}
+
+/* Interest content */
+
+.about-interest-content {
+  min-width: 0;
+}
+
+.about-interest-content h3 {
+  margin: 1px 0 5px;
+
+  color: var(--text-h);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.about-interest-content p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTTOM INFORMATION
+========================================= */
+
+.about-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 46px;
+  padding-top: 19px;
+
+  border-top: 1px solid var(--border);
+}
+
+.about-bottom span:not(.about-bottom-divider) {
+  color: var(--text-muted);
+
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1px;
+}
+
+.about-bottom-divider {
+  width: 4px;
+  height: 4px;
+
+  flex-shrink: 0;
+
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .about-section {
+    padding: 32px 25px 38px;
+  }
+
+  .about-heading {
+    gap: 25px;
+  }
+
+  .about-heading-image {
+    grid-template-columns: 140px minmax(0, 1fr);
+    height: 165px;
+  }
+
+  .about-heading-image-name .firstname {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .about-heading-image-name .lastname {
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+  }
+
+  .about-content {
+    gap: 40px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .about-heading {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-heading-image {
+    grid-template-columns: 150px minmax(0, 1fr);
+    height: 175px;
+  }
+
+  .about-heading-image-name .firstname {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
+
+  .about-heading-image-name .lastname {
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 32px 16px 35px;
+  }
+
+  .about-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .about-heading-text h2 {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+
+  /* Compact photo stays on the left */
+
+  .about-heading-image {
+    grid-template-columns: 115px minmax(0, 1fr);
+    height: 140px;
+  }
+
+  .about-heading-image-name {
+    padding: 8px 4px;
+  }
+
+  .about-heading-image-name h2 {
+    letter-spacing: -1.5px;
+  }
+
+  .about-heading-image-name .firstname {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+  }
+
+  .about-heading-image-name .lastname {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  /* Content becomes one column */
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-intro {
+    max-width: 100%;
+  }
+
+  .about-intro .about-lead {
+    font-size: 16px;
+  }
+
+  .about-intro p {
+    font-size: 13px;
+  }
+
+  .about-interest {
+    gap: 13px;
+    padding: 15px 0;
+  }
+
+  .about-interest-content h3 {
+    font-size: 13px;
+  }
+
+  .about-interest-content p {
+    font-size: 11px;
+  }
+
+  .about-bottom {
+    gap: 10px;
+    margin-top: 32px;
+    padding-top: 17px;
+  }
+
+  .about-bottom span:not(.about-bottom-divider) {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .about-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .about-heading-image {
+    grid-template-columns: 95px minmax(0, 1fr);
+    height: 120px;
+  }
+
+  .about-heading-image-name .firstname {
+    font-size: clamp(2.2rem, 9vw, 2.8rem);
+  }
+
+  .about-heading-image-name .lastname {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .about-bottom {
+    gap: 8px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-interest,
+  .about-github-link {
+    transition: none;
+  }
+}

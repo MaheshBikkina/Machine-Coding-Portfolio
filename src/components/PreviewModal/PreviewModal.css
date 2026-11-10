@@ -1,64 +1,205 @@
+
+/* Modal overlay */
+
 .modal-overlay {
-    display: flex;
-    z-index: 1000;
-    inset: 0;
-    position: fixed;
-    justify-content: center;
-    padding: 24px;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(40, 41, 35, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-sizing: border-box;
 }
+
+/* Main modal */
 
 .preview-modal {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 85vh; 
-    background: url('/images/SageGreenCodingWorkspaceSketch.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-      
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
-    overflow: hidden;
-    padding: 24px;
+  position: relative;
+  isolation: isolate;
 
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  max-width: 1500px;
+  height: 100vh;
+  max-height: 950px;
+
+  padding: 24px;
+
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(
+      rgba(247, 244, 238, 0.78),
+      rgba(247, 244, 238, 0.78)
+    ),
+    url("/images/SageGreenCodingWorkspaceSketch.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 24px 80px rgba(40, 41, 35, 0.25);
+
+  animation: modalAppear 0.25s ease;
 }
+
+/* Header */
 
 .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  gap: 16px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid var(--border);
 }
 
-.modal-header h2 {
-    margin: 0;
+.modal-heading h2 {
+  margin: 0;
+
+  color: var(--text-h);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.modal-header p {
-    margin: 4px 0 0;
+.modal-heading p {
+  margin: 5px 0 0;
+
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
-.modal-header button {
-    border: none;
-    background: transparent;
-    font-size: 30px;
+/* Close button */
+
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
 }
+
+.modal-close:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Preview content */
 
 .modal-content {
-    flex: 1;
-    min-height: 0;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-sm);
 }
 
 .modal-content iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  border-radius: inherit;
+  background: white;
+}
+
+/* Animation */
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 14px;
+  }
+
+  .preview-modal {
     width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    height: 90vh;
+    padding: 16px;
+  }
+
+  .modal-heading h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .modal-overlay {
+    padding: 8px;
+  }
+
+  .preview-modal {
+    height: 94vh;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .modal-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+
+  .modal-heading h2 {
+    font-size: 1.05rem;
+  }
+
+  .modal-heading p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-modal {
+    animation: none;
+  }
 }

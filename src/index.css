@@ -9,6 +9,7 @@
   --surface: #FFFFFF;
   --surface-hover: #F0F3EA;
   --surface-raised: #E5EBDD;
+  --hero-bg: ""
 
   /* Text colors */
   --text: #526254;
@@ -64,6 +65,7 @@
   /* Global colors */
   color: var(--text);
   background: var(--bg);
+  --challenge-bg: url("/Machine-Coding-Portfolio/images/ElegantGreenBotanicalCornerSketch.png");
 
   /* Text rendering */
   font-synthesis: none;

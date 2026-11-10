@@ -1,5 +1,29 @@
 
 export const themes = {
+  outfit: {
+    "--bg": "#F9E078",
+    "--surface": "#FFE98F",
+    "--surface-hover": "#F3D76A",
+    "--surface-raised": "#EBCB54",
+
+    "--text": "#343B40",
+    "--text-h": "#1E252B",
+    "--text-muted": "#62645B",
+
+    "--accent": "#20272E",
+    "--accent-hover": "#414A50",
+    "--accent-bg": "rgba(32, 39, 46, 0.10)",
+    "--accent-border": "rgba(32, 39, 46, 0.25)",
+
+    "--border": "#E1C95F",
+    "--border-hover": "#CDB44B",
+
+    "--glass-bg": "rgba(255, 233, 143, 0.88)",
+    "--glass-border": "rgba(32, 39, 46, 0.12)",
+
+    "--code-bg": "#F3DB76",
+    "color-scheme": "light",
+  },
   dark: {
     "--bg": "#0b1220",
     "--surface": "#141e30",
@@ -47,6 +71,33 @@ export const themes = {
     "--glass-border": "rgba(70, 100, 75, 0.12)",
 
     "--code-bg": "#EDF2EA",
+    "color-scheme": "light",
+  },
+
+
+  orange: {
+    "--bg": "#F7F4EE",
+    "--surface": "#FFFEFA",
+    "--surface-hover": "#F4EDE3",
+    "--surface-raised": "#EFE5D8",
+
+    "--text": "#62594F",
+    "--text-h": "#282923",
+    "--text-muted": "#918579",
+
+    "--accent": "#E87936",
+    "--accent-hover": "#C65D27",
+
+    "--accent-bg": "rgba(232, 121, 54, 0.10)",
+    "--accent-border": "rgba(232, 121, 54, 0.28)",
+
+    "--border": "#E7DED1",
+    "--border-hover": "#D9B99E",
+
+    "--glass-bg": "rgba(255, 254, 250, 0.82)",
+    "--glass-border": "rgba(198, 93, 39, 0.12)",
+
+    "--code-bg": "#F0E9DE",
     "color-scheme": "light",
   },
 

@@ -1,3 +1,35 @@
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .app-main {
-    padding-top: 90px;
+    padding-top: 85px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-content {
+    position: relative;
+    width: 100%;
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.footer-section {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
 }

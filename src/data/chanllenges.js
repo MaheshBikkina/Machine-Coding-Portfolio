@@ -8,7 +8,7 @@ export const challenges = [
     topics: ["React State", "Conditional Rendering", "Event Handling"],
     difficulty: "Advanced",
     demoUrl: "https://intellichattt.netlify.app/",
-    thumbnail: "images/projectPics/AI-Chatbot.png",
+    thumbnail: "/Machine-Coding-Portfolio/images/projectPics/AI-Chatbot.png",
   },
   {
     id: 0,
@@ -16,7 +16,7 @@ export const challenges = [
     topics: ["React State", "Conditional Rendering", "Event Handling"],
     difficulty: "Advanced",
     demoUrl: "https://mahesh-foodhub.netlify.app/",
-    thumbnail: "images/projectPics/FoodHub.png",
+    thumbnail: "/Machine-Coding-Portfolio/images/projectPics/FoodHub.png",
   },
   // {
   //   id: 1,
@@ -161,7 +161,7 @@ export const challenges = [
     topics: ["Drag and Drop", "CRUD Operations", "State Management"],
     difficulty: "Intermediate",
     demoUrl: "https://mb-kanban-board.netlify.app/",
-    thumbnail: "images/projectPics/Kanban.png"
+    thumbnail: "/Machine-Coding-Portfolio/images/projectPics/Kanban.png"
   },
   // {
   //   id: 21,
@@ -204,7 +204,7 @@ export const challenges = [
     topics: ["CRUD Operations", "Data Visualization", "Local Storage"],
     difficulty: "Intermediate",
     demoUrl: "https://mb-expense-tracker.netlify.app/",
-    thumbnail: "images/projectPics/ExpenseTracker.png",
+    thumbnail: "/Machine-Coding-Portfolio/images/projectPics/ExpenseTracker.png",
   },
   // {
   //   id: 27,

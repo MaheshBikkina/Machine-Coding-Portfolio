@@ -101,7 +101,7 @@ const Navbar = ({ activePage, setActivePage }) => {
 
       <div className="right-container">
         <a
-          href="https://github.com/YOUR_USERNAME"
+          href="https://github.com/MaheshBikkina"
           className="navbar__github"
           target="_blank"
           rel="noreferrer"
